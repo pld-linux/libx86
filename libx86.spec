@@ -6,7 +6,7 @@ License:	BSD
 Group:		Libraries
 Source0:	http://www.codon.org.uk/~mjg59/libx86/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	c426d4f29fdf3499158cf49d4f374315
-URL:		http://www.xmailserver.org/xdiff-lib.html
+URL:		http://www.codon.org.uk/~mjg59/libx86/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
