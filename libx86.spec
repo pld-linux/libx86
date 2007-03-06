@@ -1,12 +1,15 @@
 Summary:	A hardware-independent library for executing real-mode x86 code
 Name:		libx86
 Version:	0.99
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://www.codon.org.uk/~mjg59/libx86/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	c426d4f29fdf3499158cf49d4f374315
 URL:		http://www.codon.org.uk/~mjg59/libx86/
+# it's supposed to be arch independant emu library but unfortunately right now it doesn't build
+# on other architectures; check with newer versions!
+ExclusiveArch: %{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
