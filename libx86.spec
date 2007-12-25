@@ -2,7 +2,7 @@ Summary:	A hardware-independent library for executing real-mode x86 code
 Summary(pl.UTF-8):	Niezależna od sprzętu biblioteka do wykonywania kodu trybu rzeczywistego x86
 Name:		libx86
 Version:	0.99
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries
 Source0:	http://www.codon.org.uk/~mjg59/libx86/downloads/%{name}-%{version}.tar.gz
