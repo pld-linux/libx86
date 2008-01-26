@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://www.codon.org.uk/~mjg59/libx86/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	c426d4f29fdf3499158cf49d4f374315
 URL:		http://www.codon.org.uk/~mjg59/libx86/
+BuildRequires:	sed >= 4.0
 # it's supposed to be arch independant emu library but unfortunately right now it doesn't build
 # on other architectures; check with newer versions!
 ExclusiveArch:	%{ix86} %{x8664}
@@ -76,13 +77,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/libx86.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_includedir}/*.h
+%attr(755,root,root) %{_libdir}/libx86.so
+%{_includedir}/libx86.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libx86.a
