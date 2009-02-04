@@ -2,11 +2,12 @@ Summary:	A hardware-independent library for executing real-mode x86 code
 Summary(pl.UTF-8):	Niezależna od sprzętu biblioteka do wykonywania kodu trybu rzeczywistego x86
 Name:		libx86
 Version:	1.1
-Release:	1
+Release:	2
 License:	MIT (libx86), BSD (x86emu)
 Group:		Libraries
 Source0:	http://www.codon.org.uk/~mjg59/libx86/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	41bee1f8e22b82d82b5f7d7ba51abc2a
+Patch0:		%{name}-lrmi.patch
 URL:		http://www.codon.org.uk/~mjg59/libx86/
 # it's supposed to be arch independant emu library but unfortunately right now it doesn't build
 # on other architectures; check with newer versions!
@@ -52,6 +53,7 @@ Statyczna biblioteka libx86.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__make} \
